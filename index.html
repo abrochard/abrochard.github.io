@@ -1,10 +1,30 @@
 <html>
     <head>
-        Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.
+        <meta charset="utf-8"/>
+        <title>
+            KarmaJS
+        </title>
+        <script type="text/javascript" src="KarmaJS/Constants.js"></script>
+        <script type="text/javascript" src="KarmaJS/Card.js"></script>
+        <script type="text/javascript" src="KarmaJS/Deck.js"></script>
+        <script type="text/javascript" src="KarmaJS/Player.js"></script>
+        <script type="text/javascript" src="KarmaJS/Game.js"></script>
+        <script type="text/javascript">
+         function init(){
+             var canvas = document.getElementById('board');
+             if (canvas.getContext){
+
+                 var game = new Game(canvas);
+                 game.init(GAME.PLAYERS);
+
+             }
+         }
+        </script>
+        <style type="text/css">
+         canvas { border: 1px solid black; }
+        </style>
     </head>
-    <body>
-
-        Nullam eu ante vel est convallis dignissim.  Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.  Nunc porta vulputate tellus.  Nunc rutrum turpis sed pede.  Sed bibendum.  Aliquam posuere.  Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis varius mi purus non odio.  Pellentesque condimentum, magna ut suscipit hendrerit, ipsum augue ornare nulla, non luctus diam neque sit amet urna.  Curabitur vulputate vestibulum lorem.  Fusce sagittis, libero non molestie mollis, magna orci ultrices dolor, at vulputate neque nulla lacinia eros.  Sed id ligula quis est convallis tempor.  Curabitur lacinia pulvinar nibh.  Nam a sapien.
-
+    <body onload="init();">
+        <canvas id="board" width="750" height="750"></canvas>
     </body>
 </html>
