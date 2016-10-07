@@ -33,10 +33,31 @@
         </script>
 
         <style type="text/css">
-         canvas { border: 1px solid black; }
+         body {
+             text-align: center;
+         }
+         canvas {
+             border: 1px solid black;
+         }
+         .game-title {
+             font-size: 30px;
+             text-decoration: underline;
+         }
+         .subheading {
+             margin-top: 15px;
+             font-size: 20px;
+         }
+         .tip {
+             margin-top: 10px;
+             font-size: 18px;
+             margin-bottom: 15px;
+         }
         </style>
     </head>
     <body onload="init();">
+        <div class="game-title">Karma</div>
+        <div class="subheading">For the rules go to the <a href="https://github.com/abrochard/KarmaJS#rules" target="_blank">repo page</a></div>
+        <div class="tip">To play multiple cards of the same value together, use the swipe motion on them</div>
         <canvas id="board" width="750" height="750"></canvas>
         <div style="margin-top:50px"><a href="https://github.com/abrochard/KarmaJS" target="_blank">Source</a></div>
         <div><a href="https://github.com/abrochard/KarmaJS#rules" target="_blank">Rules</a></div>
