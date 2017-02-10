@@ -1,5 +1,6 @@
 update:
 	git submodule update --recursive --remote
+	git commit -a -m 'updating'
 
 clone:
 	git submodule update --init --recursive
