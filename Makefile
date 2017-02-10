@@ -1,4 +1,5 @@
 update:
+	git pull
 	git submodule update --recursive --remote
 	git commit -a -m 'updating'
 
