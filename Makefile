@@ -1,12 +1,18 @@
+# build and deploy the public forlder for [repo]
+define deploy
+	rm -rf $(1)
+	mkdir $(1)
+	cd repos/$(1) && git pull && make
+	cp -r repos/$(1)/public/* $(1)/.
+endef
+
 .PHONY: spotify-gaming
 spotify-gaming: repos
-	rm -rf spotify-gaming
-	mkdir spotify-gaming
-	cd repos/spotify-gaming && git pull && make
-	cp -r repos/spotify-gaming/public/* spotify-gaming/.
+	$(call deploy,$@)
 
 repos:
 	mkdir repos
+	git clone https://github.com/abrochard/game-timeline.git repos/game-timeline
 	git clone https://github.com/abrochard/spotify-gaming.git repos/spotify-gaming
 
 update:
