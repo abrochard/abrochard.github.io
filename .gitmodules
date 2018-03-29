@@ -4,6 +4,3 @@
 [submodule "game-timeline"]
 	path = game-timeline
 	url = https://github.com/abrochard/game-timeline.git
-[submodule "spotify-gaming"]
-	path = spotify-gaming
-	url = https://github.com/abrochard/spotify-gaming.git
