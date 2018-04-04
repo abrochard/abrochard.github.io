@@ -10,6 +10,11 @@ endef
 spotify-gaming: repos
 	$(call deploy,$@)
 
+
+.PHONY: game-timeline
+game-timeline: repos
+	$(call deploy,$@)
+
 repos:
 	mkdir repos
 	git clone https://github.com/abrochard/game-timeline.git repos/game-timeline

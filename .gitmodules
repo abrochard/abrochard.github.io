@@ -1,6 +1,3 @@
 [submodule "KarmaJS"]
 	path = KarmaJS
 	url = https://github.com/abrochard/KarmaJS
-[submodule "game-timeline"]
-	path = game-timeline
-	url = https://github.com/abrochard/game-timeline.git
