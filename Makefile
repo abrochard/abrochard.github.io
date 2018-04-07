@@ -2,14 +2,13 @@
 define deploy
 	rm -rf $(1)
 	mkdir $(1)
-	cd repos/$(1) && git pull && make
+	cd repos/$(1) && git reset --hard master && git pull && npm install && make
 	cp -r repos/$(1)/public/* $(1)/.
 endef
 
 .PHONY: spotify-gaming
 spotify-gaming: repos
 	$(call deploy,$@)
-
 
 .PHONY: game-timeline
 game-timeline: repos
@@ -32,5 +31,8 @@ clone:
 clean:
 	rm -rf KarmaJS game-timeline spotify-gaming
 
+# .PHONY: all
+# all: clean clone
+
 .PHONY: all
-all: clean clone
+all: spotify-gaming game-timeline
