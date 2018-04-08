@@ -6,76 +6,20 @@
 
         <title>Adrien Brochard Homepage</title>
 
-        <!-- AngularJS -->
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-        <!-- JQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <!-- jQuery and Popper.js -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
         <!-- Thanks to FreeFavicon.com -->
         <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPEzUOFiJQPw0NL0IKBiVBAQAFMgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQkuhz5s4P8+bOH/KkOZ/xYZUb4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABR4pbtcxULT/PWfd/ytCnP8HABp7AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAElIgLXXpJDSC7jdbyP8lN4f/AAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAMStCm+04Xsz/KkGb/wAAAEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAqAAAAFQAAAC01V8H/OV/P/ypAmP8NAy9xAFcAcABUAKUAqQCeAHwAWgAAAAAAAAAAAAAAKQCsAOMAdgD3AOUA/wCeAN8kNYSsNlrG/z1o3/8qQJn/GyFi/gDgAP8AnwD/AK0A/wBNAKYACgBfAAAAAgByAHQAuwD/ALsA/wMDCf8SK0D/DQUw/xwjZv89Zt3/Dy44/wZSF/8OJDL/AJAA/wD/AP8AfQD/ANsA5wBMAFEA/wD/AOAA/wC1AP8AbwD/AOAA/wCTAP8jMX7/ExFH/wLyCP8AwwD/DSAu/xEuPv8ALQH/ALYA/wBqAJ8AWwCDAGAA/wC2AP8AzQD/AJ4A/wDHAP8SU0D/BIgN/wlrH/8AmAD/AMIA/wDcAP8AdAD/AMEA/wDDAP8AoADeAAAALACxAOYA/wD/AIkA/wD/AP8Cewb/Cx8o/wDeAP8AcQD/AMsA/wCtAP8AYwD/AHIA/wCxAP8AwQD/AIQAkwAIACUAnAD8AH8A/wCFAP8A0AD/ACMA/wDzAP8AugD/AK4A/wD1AP8AiQD/AP8A/wB6AP8AfQD/AP8A/wDCALkAQgB8AIUAzQDkAP8ApQD/AP8A/wCyAP8AxgD/AEQA/wD/AP8ApAD/AF8A/wCpALEArgC1AMsA6QBIAGcATQBQAAAAAgBSAF4A/wD/AI4A/wB4AP8A7AD/AI4A9wD/AP8AiADPAOMAxwDbAOwAAAAOAHQAXgA2AEAAAAAAAAAAAAAAAAAALwA1ADgAkwD/AP8AjgC9ALgAmgBXAEoA/ADSAE4AGABqAG8ARQBhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA8AAAAAQAAAAAAAAAAACcABAAAAAAAAAAJAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA/A8AAPwfAAD4HwAA+B8AAPgfAADgAQAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAACAHwAAxJ8AAA==" rel="icon" type="image/x-icon">
 
-        <script type="text/javascript">
-         angular.module('app', [])
-                .controller('Controller', function($scope) {
-
-                    var self = this;
-                    self.itemsPerRow = 3;
-                    self.repos = [
-                        {
-                            title: 'KarmaJS',
-                            URL: 'KarmaJS/index.html',
-                            desc: 'Play Karma card game in your browser.'
-                        },
-                        {
-                            title: 'Game Timeline',
-                            URL: 'game-timeline/index.html',
-                            desc: 'View an interactive timeline of all the games I played.'
-                        },
-                        {
-                            title: 'Spotify Gaming',
-                            URL: 'spotify-gaming/index.html',
-                            desc: 'Explore video game soundtracks on Spotify.'
-                        },
-                    ];
-
-                    var split = function(list, max) {
-                        var clone = list.slice(0);
-                        var result = [];
-
-                        while (clone.length > 0)
-                            result.push(clone.splice(0, max));
-
-                        return result;
-                    };
-
-                    self.repos = split(self.repos, self.itemsPerRow);
-                });
-
-        </script>
-
         <style>
 
          body {
-             background: #efefef;
-         }
-
-         .row-width {
-             width: 75%;
-             margin-left: auto;
-             margin-right: auto;
-         }
-
-         .no-padding {
-             padding:0;
-         }
-
-         #main {
-             margin-top: 30px;
-             margin-bottom: 30px;
+             background: #bfdee8;
          }
 
          a {
@@ -83,18 +27,14 @@
          }
 
          .card {
-             margin: 15px;
-             padding-top: 150px;
-             padding-bottom: 150px;
+             margin-top: 15px;
              text-align: center;
-             border: 1px;
-             font-size: 24px;
+             font-size: 22px;
              color: black;
-             background: #c5c5f5;
-             max-width: 300px;
-             transform-origin: 8px 8px 0;
-             transform-style: preserve-3d;
-             transition-duration: 0.65s;
+         }
+
+         .card-img-top {
+             padding: 5px;
          }
 
          .card:hover {
@@ -102,11 +42,6 @@
              -moz-filter:brightness(95%);
              filter: url(#brightness);
              filter:brightness(95%);
-             transform: rotateX(10deg);
-         }
-
-         .subtext {
-             font-size: 11px;
          }
 
          .corner {
@@ -118,24 +53,47 @@
         </style>
     </head>
     <body>
-        <div id="main" ng-controller="Controller as c">
-            <div ng-repeat="row in c.repos" class="row row-width">
-                <div ng-repeat="repo in row" class="col-md-{{12/c.itemsPerRow}} no-padding">
-                    <a href="{{repo.URL}}">
-                        <div class="card">
-                            {{repo.title}}
-                            <div class="subtext">
-                                {{repo.desc}}
+        <div class="container" style="margin-bottom: 15px;">
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="KarmaJS/index.html">
+                        <div class="card" style="">
+                            <img class="card-img-top" src="ftpackage-games-card-152-116263.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">KarmaJS</h5>
+                                <p class="card-text">Play Karma card game in your browser.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="game-timeline/index.html">
+                        <div class="card" style="">
+                            <img class="card-img-top" src="video-game-controller-icon-152-227918.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Game Timeline</h5>
+                                <p class="card-text">View an interactive timeline of all the games I played.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="spotify-gaming/index.html">
+                        <div class="card" style="">
+                            <img class="card-img-top" src="music-152-166613.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Spotify Gaming</h5>
+                                <p class="card-text">Explore video game soundtracks on Spotify.</p>
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
-            <div class="corner">
-                <a href="https://github.com/abrochard">
-                    <img alt="Github" class="gh-mark" src="GitHub-Mark-32px.png">
-                </a>
-            </div>
+        </div>
+        <div class="corner">
+            <a href="https://github.com/abrochard">
+                <img alt="Github" class="gh-mark" src="GitHub-Mark-32px.png">
+            </a>
         </div>
     </body>
 </html>

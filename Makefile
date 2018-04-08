@@ -36,3 +36,6 @@ clean:
 
 .PHONY: all
 all: spotify-gaming game-timeline
+	git add spotify-gaming/
+	git add game-timeline/
+	git commit -m 'updating'
