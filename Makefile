@@ -7,35 +7,37 @@ define deploy
 endef
 
 .PHONY: spotify-gaming
-spotify-gaming: repos
+spotify-gaming: repos/spotify-gaming
 	$(call deploy,$@)
 
 .PHONY: game-timeline
-game-timeline: repos
+game-timeline: repos/game-timeline
 	$(call deploy,$@)
+
+.PHONY: KarmaJS
+KarmaJS: repos/KarmaJS
+	$(call deploy,$@)
+
+repos/game-timeline: repos
+	git clone https://github.com/abrochard/game-timeline.git repos/game-timeline
+
+repos/spotify-gaming: repos
+	git clone https://github.com/abrochard/spotify-gaming.git repos/spotify-gaming
+
+repos/KarmaJS: repos
+	git clone https://github.com/abrochard/KarmaJS.git repos/KarmaJS
 
 repos:
 	mkdir repos
-	git clone https://github.com/abrochard/game-timeline.git repos/game-timeline
-	git clone https://github.com/abrochard/spotify-gaming.git repos/spotify-gaming
-
-update:
-	git pull
-	git submodule update --recursive --remote
-	git commit -a -m 'updating'
-
-clone:
-	git submodule update --init --recursive
 
 .PHONY: clean
 clean:
 	rm -rf KarmaJS game-timeline spotify-gaming
-
-# .PHONY: all
-# all: clean clone
+	rm -rf repos
 
 .PHONY: all
-all: spotify-gaming game-timeline
+all: spotify-gaming game-timeline KarmaJS
 	git add spotify-gaming/
 	git add game-timeline/
-	git commit -m 'updating'
+	git add KarmaJS/
+	git status
