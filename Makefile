@@ -1,4 +1,4 @@
-# build and deploy the public forlder for [repo]
+# build and deploy the public folder for [repo]
 define deploy
 	rm -rf $(1)
 	mkdir $(1)
