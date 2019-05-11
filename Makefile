@@ -4,6 +4,8 @@ define deploy
 	mkdir $(1)
 	cd repos/$(1) && git reset --hard master && git pull && npm install && make
 	cp -r repos/$(1)/public/* $(1)/.
+	git add $(1)/
+	git status
 endef
 
 .PHONY: spotify-gaming
@@ -37,7 +39,3 @@ clean:
 
 .PHONY: all
 all: spotify-gaming game-timeline KarmaJS
-	git add spotify-gaming/
-	git add game-timeline/
-	git add KarmaJS/
-	git status
